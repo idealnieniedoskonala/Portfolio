@@ -1,0 +1,255 @@
+/* Select all elemnts */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+/* Custom properties */
+
+:root {
+    --ff: 'Merriweather', serif;
+    --fs-body: 1rem;
+    --fs-h1: 3rem;
+    --fs-h2: 2.5rem;
+    --fs-h3: 1.25rem;
+    --clr-light: #fff;
+    --clr-dark: rgb(41, 27, 27);
+    --clr-accent: rgb(45, 224, 200);
+    --clr-accent2: rgb(224, 45, 149);
+    --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, .25), 0.125em 0.125em 0.25em rgba(0, 0, 0, .15);
+}
+
+@media (min-width: 800px) {
+     :root {
+        --fs-h1: 4.5rem;
+        --fs-h2: 3.75rem;
+        --fs-h3: 1.5rem;
+        --fs-body: 1.125rem;
+    }
+}
+
+
+/* General Styles */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: mistyrose;
+    font-size: var(--fs-body);
+    font-family: var(--ff);
+    color: var(--clr-dark);
+    line-height: 1.6;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+
+/* NAV */
+
+nav {
+    position: relative;
+}
+
+.nav>li>a {
+    color: var(--clr-accent);
+    background: var(--clr-dark);
+    font-weight: bold;
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.nav>li {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--fs-body);
+}
+
+.dropdown {
+    opacity: 0;
+    position: absolute;
+    display: none;
+    padding: 20px;
+    overflow: hidden;
+    transform: translateY(100px);
+}
+
+.trigger-enter .dropdown {
+    display: block;
+}
+
+.trigger-enter-active .dropdown {
+    opacity: 1;
+}
+
+.dropdownBackground {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    transform-origin: 50% 0;
+    background: var(--clr-light);
+    box-shadow: var(--bs);
+    transition: all 0.3s, opacity 0.1s, translate 3.2s;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.dropdownBackground.open {
+    opacity: 1;
+}
+
+.arrow {
+    position: absolute;
+    display: block;
+    background: var(--clr-light);
+    width: 20px;
+    height: 20px;
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.dropdown1 {
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.dropdown1 img {
+    margin: 10px auto 0 auto;
+}
+
+@media (min-width: 800px) {
+    .dropdown1 {
+        min-width: 500px;
+        flex-direction: row;
+    }
+    .dropdown1 img {
+        float: left;
+        margin-right: 20px;
+    }
+}
+
+.dropdown1 p {
+    text-align: justify;
+    font-style: italic;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-bottom: 0;
+}
+
+.dropdown2 {
+    min-width: 300px;
+}
+
+.dropdown2 li {
+    display: block;
+    border-bottom: 1px solid var(--clr-accent);
+    padding: 10px;
+}
+
+.dropdown2 a {
+    color: var(--clr-accent2);
+}
+
+.dropdown3 {
+    min-width: 200px;
+}
+
+a.button {
+    background: var(--clr-accent);
+    display: block;
+    padding: 10px;
+    margin-bottom: 10px;
+    color: var(--clr-light);
+}
+
+.button[href*=twitter] {
+    background: #019FE9;
+}
+
+.button[href*=facebook] {
+    background: #3B5998;
+}
+
+.button[href*=github] {
+    background: rgb(14, 17, 24);
+}
+
+
+/* MAIN */
+
+header {
+    margin: 30px;
+    text-align: center;
+}
+
+main {
+    margin: 0;
+    text-align: center;
+}
+
+select {
+    margin: 1.0em;
+}
+
+.dog-imgs {
+    background: var(--clr-dark);
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.dog-img {
+    flex: 1;
+    max-width: 300px;
+    max-height: 300px;
+    object-fit: cover;
+}
+
+.btn {
+    display: inline-block;
+    margin-left: 1.0em;
+    padding: .5em 1.5em;
+    background: var(--clr-dark);
+    color: var(--clr-accent);
+    text-decoration: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    transition: transform 200ms ease-in-out;
+}
+
+.btn:hover {
+    transform: scale(1.1)
+}

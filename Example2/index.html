@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="EN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example</title>
+    <!-- normalize -->
+    <link rel="stylesheet" href="normalize.css">
+    <!-- font awesome link -->
+    <!-- <link rel="stylesheet" href="#"> -->
+    <!-- styling CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <h2>Searching for...</h2>
+    <nav class="nav-top">
+        <div class="dropdownBackground">
+            <span class="arrow"></span>
+        </div>
+        <ul class="nav">
+            <li>
+                <a href="#">About me</a>
+                <div class="dropdown">
+                    <div class="dropdown1">
+                        <img src="photo.jpg">
+                        <p>Ut accumsan, nisl purus convallis lacus, vitae volutpat ex mi id ex. Nulla tortor ligula, porttitor sit amet odio nec, lobortis lobortis enim. </p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <a href="#">Sth here</a>
+                <ul class="dropdown dropdown2">
+                    <li>
+                        <span classs="dropdown2-item">STH</span>
+                        <a href="#">STH bla bla</a>
+                    </li>
+                    <li>
+                        <span classs="dropdown2-item">STH</span>
+                        <a href="#">STH bla bla</a>
+                    </li>
+                    <li>
+                        <span classs="dropdown2-item">STH</span>
+                        <a href="#">STH bla bla</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Other</a>
+                <ul class="dropdown dropdown3">
+                    <li><a class="button" href="http://twitter.com">Twitter</a></li>
+                    <li><a class="button" href="http://facebook.com">Facebook</a></li>
+                    <li><a class="button" href="http://github.com">GitHub</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <br>
+    <header>
+        <h2>This is dog search engine</h2>
+    </header>
+    <br>
+    <main>
+        <p>Please select a breed of dog and you'll get a chance to see how it looks like.</p>
+        <label for="dog">What type of dog would you like to see?</label>
+        <select class="dogs" id="dog" name="dog" required></select>
+        <button class="btn">Fetch a dog!</button>
+
+        <div class="dog-imgs">
+            <img class="dog-img" src="dog1.jpg" alt="dog">
+            <img class="dog-img" src="dog2.jpg" alt="dog">
+            <img class="dog-img" src="dog3.jpg" alt="dog">
+        </div>
+    </main>
+    <footer></footer>
+    <script src="index.js"></script>
+    <script src="dogs.js"></script>
+</body>
+
+</html>
